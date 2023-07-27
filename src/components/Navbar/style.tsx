@@ -1,6 +1,5 @@
 import { styled } from "@/styles/stitches.config";
 import { Flex, Container } from "@/styles/Global";
-import { Button } from "@/styles/Buttons";
 
 export const Navbar = styled("nav", {
   background: "$grey0",
