@@ -1,7 +1,7 @@
 import { styled } from "@/styles/stitches.config";
 import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
-import backgroundImg from "@/public/static/img/background/header-bg.svg";
+import myself from "@/public/static/img/myself/myself.jpg";
 
 import dots from "@/public/static/img/background/dots.svg";
 
@@ -26,13 +26,9 @@ export const Header = styled("header", {
 
 export const HeaderContent = styled("div", {
   maxWidth: "100%",
-  width: "36rem",
   display: "flex",
   flexDirection: "column",
   gap: "$2",
-  "@tablet": {
-    width: "36rem",
-  },
   "@mobile": {
     width: "100%",
   },
@@ -97,9 +93,53 @@ export const StackCards = styled("div", {
   },
 });
 
-export const ProjectsArea = styled("section", {
+export const AboutMeArea = styled("section", {
   padding: "$section 0",
   backgroundColor: "$grey0",
+  backgroundImage: `url(${dots})`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "left top 11rem",
+  "@tablet": {
+    backgroundPosition: "right top 8rem",
+    padding: "$sectionMobile 0",
+  },
+});
+
+export const AboutMeContainer = styled("section", {
+  display: "flex",
+  gap: "2rem",
+
+  "@mobile": {
+    flexDirection: "column",
+  },
+});
+
+export const AboutMeAreaSocialMediaMessage = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  gap: "2rem",
+
+  "@mobile": {
+    width: "100%",
+    marginTop: "5rem",
+  },
+});
+
+export const AboutMeImg = styled("div", {
+  backgroundImage: `url(${myself})`,
+  backgroundRepeat: "no-repeat",
+  borderRadius: "100%",
+  minWidth: "150px",
+  maxWidth: "150px",
+  minHeight: "150px",
+  maxHeight: "150px",
+  backgroundPosition: "left top -1rem",
+  alignSelf: "center",
+});
+
+export const ProjectsArea = styled("section", {
+  padding: "$section 0",
+  backgroundColor: "$grey1",
   backgroundImage: `url(${dots})`,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "left top 11rem",
